@@ -36,7 +36,7 @@ class _DashBoardState extends State<DashBoardView> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       bottombarIcon(EdgeInsets.all(12), Icons.home),
-      bottombarIcon(EdgeInsets.all(12), Icons.category),
+      bottombarIcon(EdgeInsets.all(12), Icons.queue_music),
       bottombarIcon(EdgeInsets.all(12), Icons.person),
     ];
   }
@@ -81,7 +81,7 @@ class _DashBoardState extends State<DashBoardView> {
 
   PersistentBottomNavBarItem bottombarIcon(EdgeInsets padding, icons) {
     return PersistentBottomNavBarItem(
-      icon: Icon(icons,color: AppColor.primarylinear),
+      icon: Icon(icons, color: AppColor.primarylinear),
     );
   }
 }

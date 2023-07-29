@@ -50,8 +50,11 @@ class _DashBoardState extends State<DashBoard> {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(slidelist[index].image.toString()),
-                    fit: BoxFit.fill),
+                    fit: BoxFit.fill,
+                    colorFilter:
+                        ColorFilter.mode(Colors.black54, BlendMode.darken)),
                 borderRadius: BorderRadius.circular(25),
+                backgroundBlendMode: BlendMode.dstIn,
                 gradient: LinearGradient(
                     colors: [AppColor.primarylinear, AppColor.secondrylinear])),
           );
@@ -104,7 +107,7 @@ class _DashBoardState extends State<DashBoard> {
               "Home",
               style: TextStyle(
                   color: AppColor.whitecolor,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontFamily: AppFont.semibold),
             ),
           ),
@@ -117,7 +120,7 @@ class _DashBoardState extends State<DashBoard> {
               "Playist",
               style: TextStyle(
                   color: AppColor.whitecolor,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontFamily: AppFont.semibold),
             ),
           ),
@@ -130,7 +133,7 @@ class _DashBoardState extends State<DashBoard> {
               "Setting",
               style: TextStyle(
                   color: AppColor.whitecolor,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontFamily: AppFont.semibold),
             ),
           ),
@@ -143,7 +146,7 @@ class _DashBoardState extends State<DashBoard> {
               "Privarcy & Policy",
               style: TextStyle(
                   color: AppColor.whitecolor,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontFamily: AppFont.semibold),
             ),
           ),

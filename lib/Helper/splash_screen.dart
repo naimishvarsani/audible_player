@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_interpolation_to_compose_strings
 
 import 'dart:async';
 
@@ -15,11 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
     Timer(
       Duration(seconds: 3),
       () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => SignUpScreen())),
+          .pushReplacement(MaterialPageRoute(builder: (context) => SignUpScreen())),
     );
   }
 

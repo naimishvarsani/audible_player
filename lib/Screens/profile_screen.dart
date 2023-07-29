@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:audible_player/Helper/utility.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +15,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: Text("Profile",
+              style: TextStyle(fontSize: 30, fontFamily: AppFont.bold)),
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
+        ),
         backgroundColor: AppColor.bgcolor,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Center(child: Text("Profile"))],
+        body: Container(
+          height: Get.height,
+          width: Get.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                  child: Text("Profile",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: AppFont.bold,
+                          color: AppColor.whitecolor)))
+            ],
+          ),
         ));
   }
 }

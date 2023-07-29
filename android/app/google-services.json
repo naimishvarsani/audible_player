@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111482988642",
+    "project_id": "audible-player-e16fb",
+    "storage_bucket": "audible-player-e16fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111482988642:android:c7a1611ccd91dcf9db493b",
+        "android_client_info": {
+          "package_name": "com.example.audible_player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111482988642-ks9gql40573ffpoehh26ck6lf2bqflp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwtDydIdI_tGvS1zYjzNK_hJ6cfATTc7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111482988642-ks9gql40573ffpoehh26ck6lf2bqflp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
