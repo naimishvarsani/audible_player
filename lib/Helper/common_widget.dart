@@ -30,7 +30,7 @@ class CommonWidget {
     );
   }
 
-  Widget appButton({btnheight, btnwidth, btnText,font,btnsize,ontap}) {
+  Widget appButton({btnheight, btnwidth, btnText, font, btnsize, ontap}) {
     return GestureDetector(
       onTap: ontap,
       child: Container(
@@ -46,9 +46,7 @@ class CommonWidget {
             child: Text(
           btnText,
           style: TextStyle(
-              color: AppColor.whitecolor,
-              fontFamily: font,
-              fontSize: btnsize),
+              color: AppColor.whitecolor, fontFamily: font, fontSize: btnsize),
         )),
       ),
     );

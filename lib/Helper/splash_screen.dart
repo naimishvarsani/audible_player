@@ -1,8 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_interpolation_to_compose_strings
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_interpolation_to_compose_strings, use_build_context_synchronously
 
 import 'dart:async';
 
+import 'package:audible_player/Helper/preferances.dart';
 import 'package:audible_player/Helper/utility.dart';
+import 'package:audible_player/Screens/Intro_page/introduction.dart';
 import 'package:audible_player/Screens/sign_up.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +17,17 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(
-      Duration(seconds: 3),
-      () => Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (context) => SignUpScreen())),
-    );
+    Timer(Duration(seconds: 3), () async {
+      var isIntroduction = await Preference.preference
+          .getBool(key: PrefernceKey.isIntroductionScreenLoaded, defVal: false);
+      if (isIntroduction == true) {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => SignUpScreen()));
+      } else {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (BuildContext context) => IntroPage()));
+      }
+    });
   }
 
   @override
