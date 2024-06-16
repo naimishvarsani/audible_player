@@ -37,7 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get:
   persistent_bottom_nav_bar: ^5.0.2
-  flutter_carousel_widget: ^2.0.4
+  shared_preferences:
+  google_fonts: ^6.2.1
   
 
 dev_dependencies:
